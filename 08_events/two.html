@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Code || 2 project</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <h1>Chai Code</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+        // setTimeOut = method call API
+        // setTimeout(function () {
+        //     console.log("Sameed");
+
+        // }, 2000)
+
+        // =================
+
+        // const myName = function () {
+        //     console.log("Sameed");
+        // }
+
+        const changeText = function () {
+            document.querySelector("h1").innerHTML = "Best JS Series"
+        }
+
+        const stopChangeText = setTimeout(changeText, 2000)
+
+        document.querySelector("#stop").addEventListener('click', function () {
+            clearTimeout(stopChangeText)
+            console.log("Stopped");
+
+        })
+
+    </script>
+</body>
+
+</html>

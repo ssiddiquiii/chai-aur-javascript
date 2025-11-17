@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Code || 2 project</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <h1>Chai Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        let stopInterval;
+
+        const randNum = function (str) {
+            console.log(parseInt(Math.random() * 10 + 1));
+        }
+
+        // document.querySelector("#start").addEventListener('click', function () {
+        //     stopInterval = setInterval(randNum, 1000)
+        // })
+
+        // document.querySelector("#stop").addEventListener('click', function () {
+        //     clearInterval(stopInterval)
+        // })
+
+        
+        // Prevent multiple intervals from stacking if the user clicks "start" repeatedly:
+        document.querySelector("#start").addEventListener('click', function () {
+            if (!stopInterval) {
+                stopInterval = setInterval(randNum, 1000)
+            }
+        })
+
+        document.querySelector("#stop").addEventListener('click', function () {
+            clearInterval(stopInterval)
+            stopInterval = null
+        })
+
+    </script>
+</body>
+
+</html>
